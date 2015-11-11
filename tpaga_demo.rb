@@ -7,6 +7,7 @@ module TpagaDemo
     format :json
 
     rescue_from Tpaga::ClientError do |e|
+      p e
       error!('Error', 500)
     end
 
