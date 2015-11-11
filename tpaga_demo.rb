@@ -29,9 +29,8 @@ module TpagaDemo
         lastName: params[:lastName],
         email: params[:email],
         phone: params[:phone]
-      )
-      p customer_local
-      customer = Tpaga::CustomerApi.create_customer(customer)
+      )      
+      customer = Tpaga::CustomerApi.create_customer(customer_local)
       p customer
       customer.to_hash
     end
