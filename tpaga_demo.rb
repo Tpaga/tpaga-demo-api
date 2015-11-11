@@ -30,6 +30,7 @@ module TpagaDemo
         email: params[:email],
         phone: params[:phone]
       )
+      p customer_local
       customer = Tpaga::CustomerApi.create_customer(customer)
       p customer
       customer.to_hash
