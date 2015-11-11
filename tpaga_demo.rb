@@ -23,8 +23,12 @@ module TpagaDemo
         requires :phone, type: String
       end
 
-      customer_local = Tpaga::Customer.new(firstName: params[:firstName], lastName: params[:lastName],
-      email: params[:email], phone: params[:phone])
+      customer_local = Tpaga::Customer.new(
+        firstName: params[:firstName],
+        lastName: params[:lastName],
+        email: params[:email],
+        phone: params[:phone]
+      )
       customer = Tpaga::CustomerApi.create_customer(customer)
       p customer
       customer.to_hash
