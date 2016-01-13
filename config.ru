@@ -1,4 +1,4 @@
-require 'rack/cors'
+userrequire 'rack/cors'
 
 require './tpaga_demo.rb'
 
